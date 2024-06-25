@@ -43,7 +43,7 @@ PreparedStatement pst=null;
     try{
         
         
-        String sql ="select * from Audit";
+        String sql ="select * from changeLog";
         
         pst=conn.prepareStatement(sql);
         rs=pst.executeQuery();
@@ -194,7 +194,7 @@ PreparedStatement pst=null;
         // TODO add your handling code here:
          try{
             
-            String sql ="select * from Audit where emp_id=? ";
+            String sql ="select * from changeLog where emp_id=? ";
            
             
             pst=conn.prepareStatement(sql); 
