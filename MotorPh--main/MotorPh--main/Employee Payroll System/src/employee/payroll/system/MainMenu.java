@@ -221,7 +221,7 @@ PreparedStatement pst=null;
 
         jMenuBar1.add(jMenu1);
 
-        btn_menu.setText("Audit");
+        btn_menu.setText("changeLog");
 
         jMenuItem13.setText("Add User");
         jMenuItem13.addActionListener(new java.awt.event.ActionListener() {
@@ -231,7 +231,7 @@ PreparedStatement pst=null;
         });
         btn_menu.add(jMenuItem13);
 
-        jMenuItem5.setText("Audit Trail");
+        jMenuItem5.setText("changeLog Trail");
         jMenuItem5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItem5ActionPerformed(evt);
@@ -266,7 +266,7 @@ PreparedStatement pst=null;
 
     private void jMenuItem5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem5ActionPerformed
         // TODO add your handling code here:
-        Audit_details x = new Audit_details();
+        changeLog x = new changeLog();
         x.setVisible(true);
         
         
