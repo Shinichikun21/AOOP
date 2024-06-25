@@ -1,4 +1,9 @@
+Youtube download toturial: https://youtu.be/-LTL9BY_nBM
+
+Youtube Code Presentation: https://youtu.be/HYajRPLZtaY
+
 In the realm of modern business operations, efficient management of employees is crucial for organizational success. To streamline this process, we introduce an Employee Management System built using Apache NetBeans platform, featuring a Graphical User Interface (GUI) designed with JFrame, and employing SQLite database for data management. This system is structured using Object-Oriented Programming (OOP) principles, utilizing various techniques to ensure scalability, modularity, and maintainability.
+
 
 Object-Oriented Design Principles Implemented:
 Encapsulation:
