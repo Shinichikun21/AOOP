@@ -1,0 +1,89 @@
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+public class CSSConversionSwing extends JFrame {
+    
+    public CSSConversionSwing() {
+        setTitle("CSS Conversion Swing");
+        setSize(2000, 1500);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setLayout(null);
+
+        // Rectangle 1
+        JPanel rectangle1 = new JPanel() {
+            @Override
+            protected void paintComponent(Graphics g) {
+                super.paintComponent(g);
+                Graphics2D g2d = (Graphics2D) g;
+                GradientPaint gradient = new GradientPaint(0, 0, new Color(0xFFFBFB), 0, getHeight(), new Color(0x999696));
+                g2d.setPaint(gradient);
+                g2d.fillRect(0, 0, getWidth(), getHeight());
+            }
+        };
+        rectangle1.setBounds(0, 0, 1932, 1327);
+        rectangle1.setBorder(BorderFactory.createMatteBorder(0, 0, 0, 0, new Color(0, 0, 0, 0.25f)));
+        add(rectangle1);
+
+        // MOTORPH label
+        JLabel motorphLabel = new JLabel("MOTORPH");
+        motorphLabel.setFont(new Font("jsMath-cmbx10", Font.BOLD, 128));
+        motorphLabel.setForeground(new Color(0x1E1E1E));
+        motorphLabel.setBounds(100, 100, 989, 71);
+        rectangle1.add(motorphLabel);
+
+        // Image 1
+        JLabel imageLabel = new JLabel(new ImageIcon("image.png"));
+        imageLabel.setBounds(100, 250, 805, 784);
+        rectangle1.add(imageLabel);
+
+        // Rectangle 2
+        JPanel rectangle2 = new JPanel() {
+            @Override
+            protected void paintComponent(Graphics g) {
+                super.paintComponent(g);
+                Graphics2D g2d = (Graphics2D) g;
+                GradientPaint gradient = new GradientPaint(0, 0, new Color(0xFFFAFA), 0, getHeight(), new Color(0x999696));
+                g2d.setPaint(gradient);
+                g2d.fillRect(0, 0, getWidth(), getHeight());
+            }
+        };
+        rectangle2.setBounds(950, 100, 849, 1327);
+        add(rectangle2);
+
+        // Functioning buttons and labels
+        addButtonWithLabel(rectangle1, "Employee", 100, 1000, new Rectangle(642, 89));
+        addButtonWithLabel(rectangle1, "Manager", 100, 1100, new Rectangle(642, 89));
+        addButtonWithLabel(rectangle1, "Salary", 100, 1200, new Rectangle(642, 89));
+        addButtonWithLabel(rectangle1, "Allowance", 100, 1300, new Rectangle(642, 89));
+        addButtonWithLabel(rectangle1, "Deductions", 800, 1000, new Rectangle(642, 89));
+        addButtonWithLabel(rectangle1, "Overtime", 800, 1100, new Rectangle(642, 89));
+        addButtonWithLabel(rectangle1, "Leave", 800, 1200, new Rectangle(642, 89));
+        addButtonWithLabel(rectangle1, "Request", 800, 1300, new Rectangle(642, 89));
+        addButtonWithLabel(rectangle1, "Update", 1500, 1000, new Rectangle(642, 89));
+        addButtonWithLabel(rectangle1, "Salary", 1500, 1100, new Rectangle(642, 89));
+
+    }
+
+    private void addButtonWithLabel(JPanel panel, String labelText, int x, int y, Rectangle rect) {
+        JButton button = new JButton(labelText);
+        button.setFont(new Font("jsMath-cmbx10", Font.BOLD, 40));
+        button.setBounds(x, y, rect.width, rect.height);
+        button.setBackground(new Color(0xFDFAFA));
+        button.setBorder(BorderFactory.createLineBorder(Color.BLACK, 2, true));
+        button.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                JOptionPane.showMessageDialog(null, labelText + " button clicked!");
+            }
+        });
+        panel.add(button);
+    }
+
+    public static void main(String[] args) {
+        SwingUtilities.invokeLater(() -> {
+            new CSSConversionSwing().setVisible(true);
+        });
+    }
+}
