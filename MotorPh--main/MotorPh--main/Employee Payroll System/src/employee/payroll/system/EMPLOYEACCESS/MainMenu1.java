@@ -222,7 +222,7 @@ PreparedStatement pst=null;
                    
                    
                    int value = Emp.empId;
-                   String reg = "insert into Audit (emp_id,date,status) values ('"+value+"','"+value0+" / "+values+"','Logged out')";
+                   String reg = "insert into changeLog (emp_id,date,status) values ('"+value+"','"+value0+" / "+values+"','Logged out')";
                    pst=conn.prepareStatement(reg);
                    pst.execute();
                    this.dispose();

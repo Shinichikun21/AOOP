@@ -246,7 +246,7 @@ PreparedStatement pst=null;
                    
                    
                    int value = Emp.empId;
-                   String reg = "insert into Audit (emp_id,date,status) values ('"+value+"','"+value0+" / "+values+"','Logged in')";
+                   String reg = "insert into changeLog (emp_id,date,status) values ('"+value+"','"+value0+" / "+values+"','Logged in')";
                    pst=conn.prepareStatement(reg);
                    pst.execute();
                    this.dispose();
@@ -283,7 +283,7 @@ PreparedStatement pst=null;
                    
                    
                    int value = Emp.empId;
-                   String reg = "insert into Audit (emp_id,date,status) values ('"+value+"','"+value0+" / "+values+"','Logged in')";
+                   String reg = "insert into changeLog (emp_id,date,status) values ('"+value+"','"+value0+" / "+values+"','Logged in')";
                    pst=conn.prepareStatement(reg);
                    pst.execute();
                    this.dispose();
@@ -375,7 +375,7 @@ PreparedStatement pst=null;
                    
                    
                    int value = Emp.empId;
-                   String reg = "insert into Audit (emp_id,date,status) values ('"+value+"','"+value0+" / "+values+"','Logged in')";
+                   String reg = "insert into changeLog (emp_id,date,status) values ('"+value+"','"+value0+" / "+values+"','Logged in')";
                    pst=conn.prepareStatement(reg);
                    pst.execute();
                    this.dispose();
@@ -418,7 +418,7 @@ PreparedStatement pst=null;
                    
                    
                    int value = Emp.empId;
-                   String reg = "insert into Audit (emp_id,date,status) values ('"+value+"','"+value0+" / "+values+"','Logged in')";
+                   String reg = "insert into changeLog (emp_id,date,status) values ('"+value+"','"+value0+" / "+values+"','Logged in')";
                    pst=conn.prepareStatement(reg);
                    pst.execute();
                    this.dispose();

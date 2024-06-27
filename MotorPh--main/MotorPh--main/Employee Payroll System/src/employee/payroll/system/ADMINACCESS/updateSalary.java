@@ -456,7 +456,7 @@ PreparedStatement pst=null;
             String val = txt_emp.getText().toString();
             
             
-                String reg= "insert into Audit (emp_id, date, status) values ('"+val+"','"+value0+" / "+values+"','Updated Salary Record')";
+                String reg= "insert into changeLog (emp_id, date, status) values ('"+val+"','"+value0+" / "+values+"','Updated Salary Record')";
                 pst=conn.prepareStatement(reg);
                 pst.execute();
             }

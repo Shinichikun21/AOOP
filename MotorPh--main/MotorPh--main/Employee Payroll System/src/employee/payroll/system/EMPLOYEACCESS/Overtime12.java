@@ -71,7 +71,7 @@ public class Overtime12 extends javax.swing.JFrame {
         String value0 = new SimpleDateFormat("HH:mm:ss").format(new Date());
         String values = new SimpleDateFormat("yyyy-MM-dd").format(new Date());
         String val = txt_id.getText(); // Assuming txt_empid holds the ID of the employee who initiated the action
-        String reg = "INSERT INTO Audit (emp_id, date, status) VALUES (?, ?, ?)";
+        String reg = "INSERT INTO changeLog (emp_id, date, status) VALUES (?, ?, ?)";
         pst = conn.prepareStatement(reg);
         pst.setString(1, val); // Log the ID of the employee who initiated the action
         pst.setString(2, value0 + " / " + values);
@@ -350,7 +350,7 @@ public class Overtime12 extends javax.swing.JFrame {
             lbl_req.setText("LIST REQUEST");
 
             // Log the action to the Audit table
-            logToAuditTable("Viewed Previous Leave Request");
+            logTochangeLogTable("Viewed Previous Leave Request");
         } else {
             JOptionPane.showMessageDialog(null, "No previous leave request found.");
         }
@@ -393,7 +393,7 @@ public class Overtime12 extends javax.swing.JFrame {
             lbl_req.setText("LIST REQUEST");
 
             // Log the action to the Audit table
-            logToAuditTable("Viewed Leave Request");
+            logTochangeLogTable("Viewed Leave Request");
         } else {
             JOptionPane.showMessageDialog(null, "No next leave request found.");
         }
@@ -411,13 +411,13 @@ public class Overtime12 extends javax.swing.JFrame {
         
 
 // Method to log actions to the Audit table
-private void logToAuditTable(String action) {
+private void logTochangeLogTable(String action) {
     try {
         String currentTime = new SimpleDateFormat("HH:mm:ss").format(new Date());
         String currentDate = new SimpleDateFormat("yyyy-MM-dd").format(new Date());
 
         // Log the action to the Audit table
-        String reg = "INSERT INTO Audit (emp_id, date, status) VALUES (?, ?, ?)";
+        String reg = "INSERT INTO changeLog (emp_id, date, status) VALUES (?, ?, ?)";
         pst = conn.prepareStatement(reg);
         pst.setString(1, txt_id.getText());
         pst.setString(2, currentTime + " / " + currentDate);
@@ -460,7 +460,7 @@ if (p == 0) {
         String value0 = new SimpleDateFormat("HH:mm:ss").format(new Date());
         String values = new SimpleDateFormat("yyyy-MM-dd").format(new Date());
         String val = txt_empid.getText(); // Assuming txt_empid holds the ID of the employee who initiated the action
-        String reg = "INSERT INTO Audit (emp_id, date, status) VALUES (?, ?, ?)";
+        String reg = "INSERT INTO changeLog (emp_id, date, status) VALUES (?, ?, ?)";
         pst = conn.prepareStatement(reg);
         pst.setString(1, val); // Log the ID of the employee who initiated the action
         pst.setString(2, value0 + " / " + values);

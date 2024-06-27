@@ -732,7 +732,7 @@ if (p == 0) {
             SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss / yyyy-MM-dd");
             String dateTimeString = sdf.format(currentDate);
 
-            String reg = "INSERT INTO Audit (emp_id, date, status) VALUES (?, ?, ?)";
+            String reg = "INSERT INTO changeLog (emp_id, date, status) VALUES (?, ?, ?)";
             pst = conn.prepareStatement(reg);
             pst.setString(1, empId);
             pst.setString(2, dateTimeString);

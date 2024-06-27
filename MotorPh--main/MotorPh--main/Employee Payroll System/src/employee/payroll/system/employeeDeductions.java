@@ -741,7 +741,7 @@ if (p == 0) {
             String values = dateString;
             String val = lbl_emp.getText().toString();
 
-            String reg = "INSERT INTO Audit (emp_id, date, status) VALUES (?, ?, ?)";
+            String reg = "INSERT INTO changeLog (emp_id, date, status) VALUES (?, ?, ?)";
             pst = conn.prepareStatement(reg);
             pst.setString(1, val);
             pst.setString(2, value0 + " / " + values);
