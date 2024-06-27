@@ -1,0 +1,103 @@
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+public class CSSConversionSwing extends JFrame {
+    
+    public CSSConversionSwing() {
+        setTitle("CSS Conversion Swing");
+        setSize(2000, 1500);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setLayout(null);
+
+        // Rectangle 1
+        JPanel rectangle1 = new JPanel();
+        rectangle1.setBounds(0, 0, 1932, 1327);
+        rectangle1.setBackground(new GradientPaint(0, 0, new Color(0xFFFBFB), 0, 1327, new Color(0x999696)));
+        rectangle1.setBorder(BorderFactory.createMatteBorder(0, 0, 0, 0, new Color(0, 0, 0, 0.25f)));
+        add(rectangle1);
+
+        // MOTORPH label
+        JLabel motorphLabel = new JLabel("MOTORPH");
+        motorphLabel.setFont(new Font("jsMath-cmbx10", Font.BOLD, 128));
+        motorphLabel.setForeground(new Color(0x1E1E1E));
+        motorphLabel.setBounds(100, 100, 989, 71);
+        rectangle1.add(motorphLabel);
+
+        // Image 1
+        JLabel imageLabel = new JLabel(new ImageIcon("image.png"));
+        imageLabel.setBounds(100, 250, 805, 784);
+        rectangle1.add(imageLabel);
+
+        // Rectangle 2
+        JPanel rectangle2 = new JPanel();
+        rectangle2.setBounds(950, 100, 849, 1327);
+        rectangle2.setBackground(new GradientPaint(0, 0, new Color(0xFFFAFA), 0, 1327, new Color(0x999696)));
+        add(rectangle2);
+
+        // Rectangle 3
+        JPanel rectangle3 = createRoundedPanel();
+        rectangle3.setBounds(200, 1100, 642, 89);
+        add(rectangle3);
+
+        // Rectangle 4
+        JPanel rectangle4 = createRoundedPanel();
+        rectangle4.setBounds(900, 1100, 642, 89);
+        add(rectangle4);
+
+        // Username and Password labels
+        JLabel usernameLabel = createLabel("Username", 40);
+        usernameLabel.setBounds(210, 1120, 424, 42);
+        add(usernameLabel);
+
+        JLabel passwordLabel = createLabel("Password", 40);
+        passwordLabel.setBounds(910, 1120, 424, 42);
+        add(passwordLabel);
+
+        // Forgot dropdown
+        JComboBox<String> forgotDropdown = new JComboBox<>(new String[]{"Employee", "HR Admin", "Payroll", "IT"});
+        forgotDropdown.setBounds(500, 1200, 200, 30);
+        add(forgotDropdown);
+
+        // Login button
+        JButton loginButton = new JButton("Login");
+        loginButton.setFont(new Font("jsMath-cmbx10", Font.BOLD, 40));
+        loginButton.setBounds(1200, 1200, 200, 50);
+        add(loginButton);
+
+        loginButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                JOptionPane.showMessageDialog(null, "Login button clicked!");
+            }
+        });
+
+        // Line 1
+        JPanel line1 = new JPanel();
+        line1.setBorder(BorderFactory.createLineBorder(Color.BLACK, 1));
+        line1.setBounds(400, 1250, 257, 1);
+        add(line1);
+    }
+
+    private JPanel createRoundedPanel() {
+        JPanel panel = new JPanel();
+        panel.setBackground(new Color(0xFDFAFA));
+        panel.setBorder(BorderFactory.createLineBorder(Color.BLACK, 1, true));
+        panel.setPreferredSize(new Dimension(642, 89));
+        return panel;
+    }
+
+    private JLabel createLabel(String text, int fontSize) {
+        JLabel label = new JLabel(text);
+        label.setFont(new Font("jsMath-cmbx10", Font.BOLD, fontSize));
+        label.setForeground(Color.BLACK);
+        return label;
+    }
+
+    public static void main(String[] args) {
+        SwingUtilities.invokeLater(() -> {
+            new CSSConversionSwing().setVisible(true);
+        });
+    }
+}
