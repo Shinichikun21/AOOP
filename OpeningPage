@@ -1,0 +1,97 @@
+import javafx.application.Application;
+import javafx.scene.Scene;
+import javafx.scene.control.Label;
+import javafx.scene.layout.*;
+import javafx.scene.paint.Color;
+import javafx.scene.paint.LinearGradient;
+import javafx.scene.paint.Stop;
+import javafx.scene.text.Font;
+import javafx.stage.Stage;
+
+public class CSSConversion extends Application {
+
+    @Override
+    public void start(Stage primaryStage) {
+        // Rectangle 1
+        Region rectangle1 = new Region();
+        rectangle1.setPrefSize(1932, 1327);
+        rectangle1.setStyle("-fx-background-color: linear-gradient(to bottom, #FFFBFB 0%, #E4E0E0 26.5%, #CDCACA 49%, #A8A5A5 85%, #9E9B9B 95.5%, #999696 100%); " +
+                "-fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.25), 4, 0, 0, 4);");
+
+        // MOTORPH label
+        Label motorphLabel = new Label("MOTORPH");
+        motorphLabel.setFont(Font.font("jsMath-cmbx10", 128));
+        motorphLabel.setTextFill(Color.web("#1E1E1E"));
+        motorphLabel.setLayoutX(100);
+        motorphLabel.setLayoutY(100);  // Example position, adjust as needed
+
+        // Image 1
+        Region image1 = new Region();
+        image1.setPrefSize(805, 784);
+        image1.setStyle("-fx-background-image: url('image.png');");
+        image1.setLayoutX(100);
+        image1.setLayoutY(250);  // Example position, adjust as needed
+
+        // Rectangle 2
+        Region rectangle2 = new Region();
+        rectangle2.setPrefSize(849, 1327);
+        rectangle2.setStyle("-fx-background-color: linear-gradient(to bottom, #FFFAFA 0%, #BDB9B9 64.5%, #A09C9C 93.5%, #999696 100%);");
+        rectangle2.setLayoutX(950);
+        rectangle2.setLayoutY(100);  // Example position, adjust as needed
+
+        // Rectangle 3 and Rectangle 4
+        Region rectangle3 = createRoundedRectangle();
+        Region rectangle4 = createRoundedRectangle();
+        rectangle3.setLayoutX(200);
+        rectangle3.setLayoutY(1100);  // Example position, adjust as needed
+        rectangle4.setLayoutX(900);
+        rectangle4.setLayoutY(1100);  // Example position, adjust as needed
+
+        // Username and Password labels
+        Label usernameLabel = createLabel("Username", 40);
+        Label passwordLabel = createLabel("Password", 40);
+        usernameLabel.setLayoutX(210);
+        usernameLabel.setLayoutY(1120);  // Example position, adjust as needed
+        passwordLabel.setLayoutX(910);
+        passwordLabel.setLayoutY(1120);  // Example position, adjust as needed
+
+        // Forgot and password? labels
+        Label forgotLabel = createLabel("Forgot", 20);
+        Label passwordQLabel = createLabel("password?", 20);
+        forgotLabel.setLayoutX(500);
+        forgotLabel.setLayoutY(1200);  // Example position, adjust as needed
+        passwordQLabel.setLayoutX(700);
+        passwordQLabel.setLayoutY(1200);  // Example position, adjust as needed
+
+        // Line 1
+        Region line1 = new Region();
+        line1.setPrefSize(257, 1);
+        line1.setStyle("-fx-border-color: #000000;");
+        line1.setLayoutX(400);
+        line1.setLayoutY(1250);  // Example position, adjust as needed
+
+        Pane root = new Pane(rectangle1, motorphLabel, image1, rectangle2, rectangle3, rectangle4, usernameLabel, passwordLabel, forgotLabel, passwordQLabel, line1);
+
+        Scene scene = new Scene(root, 2000, 1500);
+        primaryStage.setScene(scene);
+        primaryStage.show();
+    }
+
+    private Region createRoundedRectangle() {
+        Region region = new Region();
+        region.setPrefSize(642, 89);
+        region.setStyle("-fx-background-color: #FDFAFA; -fx-border-color: #000000; -fx-border-radius: 60px; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.25), 4, 0, 0, 4);");
+        return region;
+    }
+
+    private Label createLabel(String text, int fontSize) {
+        Label label = new Label(text);
+        label.setFont(Font.font("jsMath-cmbx10", fontSize));
+        label.setTextFill(Color.web("#000000"));
+        return label;
+    }
+
+    public static void main(String[] args) {
+        launch(args);
+    }
+}
