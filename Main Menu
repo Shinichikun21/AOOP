@@ -4,7 +4,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class CSSConversionSwing extends JFrame {
-    
+
     public CSSConversionSwing() {
         setTitle("CSS Conversion Swing");
         setSize(2000, 1500);
@@ -64,6 +64,9 @@ public class CSSConversionSwing extends JFrame {
         addButtonWithLabel(rectangle1, "Update", 1500, 1000, new Rectangle(642, 89));
         addButtonWithLabel(rectangle1, "Salary", 1500, 1100, new Rectangle(642, 89));
 
+        // Add "Upload CSV" button
+        addButtonWithLabel(rectangle1, "Upload CSV", 100, 1400, new Rectangle(642, 89));
+
     }
 
     private void addButtonWithLabel(JPanel panel, String labelText, int x, int y, Rectangle rect) {
@@ -75,7 +78,12 @@ public class CSSConversionSwing extends JFrame {
         button.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                JOptionPane.showMessageDialog(null, labelText + " button clicked!");
+                if (labelText.equals("Upload CSV")) {
+                    // Handle upload CSV action
+                    JOptionPane.showMessageDialog(null, "Upload CSV button clicked!");
+                } else {
+                    JOptionPane.showMessageDialog(null, labelText + " button clicked!");
+                }
             }
         });
         panel.add(button);
