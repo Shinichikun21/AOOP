@@ -1,9 +1,10 @@
+package employee.payroll.system.HR;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package employee.payroll.system;
 import employee.payroll.system.EMPLOYEACCESS.Overtim1;
 import employee.payroll.system.LOGINCONNECTION.Emp;
 import employee.payroll.system.LOGINCONNECTION.db;
@@ -18,6 +19,11 @@ import java.text.SimpleDateFormat;
 import javax.swing.JOptionPane;
 import java.util.Date;
 import java.util.GregorianCalendar;
+
+import employee.payroll.system.LeaveRequest;
+import employee.payroll.system.Overtime;
+import employee.payroll.system.addEmployee;
+import employee.payroll.system.employeeDeductions;
 import employee.payroll.system.ADMINACCESS.*;
 import java.awt.Color;
 import javax.swing.ImageIcon;
@@ -31,14 +37,14 @@ import java.awt.event.ActionEvent;/**
  *
  * @author Hyrex
  */
-public class MainMenu extends javax.swing.JFrame {
+public class MainMenu3 extends javax.swing.JFrame {
 Connection conn=null;
 ResultSet rs=null;
 PreparedStatement pst=null;
     /**
      * Creates new form MainMenu
      */
-    public MainMenu() {
+    public MainMenu3() {
         initComponents();
         conn = db.java_db();
         Toolkit toolkit = getToolkit();
@@ -48,7 +54,7 @@ PreparedStatement pst=null;
         
         JButton jButton7_1 = new JButton();
         jButton7_1.setEnabled(false);
-        jButton7_1.setIcon(new ImageIcon(MainMenu.class.getResource("/employee/payroll/system/Images/icons8-update-32.png")));
+        jButton7_1.setIcon(new ImageIcon(MainMenu3.class.getResource("/employee/payroll/system/Images/icons8-update-32.png")));
         jButton7_1.addActionListener(new ActionListener() {
         	public void actionPerformed(ActionEvent e) {
         		  updateSalary x = new updateSalary();
@@ -83,19 +89,20 @@ PreparedStatement pst=null;
         jButton2 = new javax.swing.JButton();
         jButton2.setEnabled(false);
         add_employee = new javax.swing.JButton();
+        add_employee.setEnabled(false);
         jButton4 = new javax.swing.JButton();
-        jButton4.setEnabled(false);
         jButton5 = new javax.swing.JButton();
-        jButton5.setEnabled(false);
         jLabel1 = new javax.swing.JLabel();
         txt_emp = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
+        jMenu1.setEnabled(false);
         jMenuItem1 = new javax.swing.JMenuItem();
         btn_menu = new javax.swing.JMenu();
         jMenuItem13 = new javax.swing.JMenuItem();
+        jMenuItem13.setEnabled(false);
         jMenuItem5 = new javax.swing.JMenuItem();
 
         jMenu3.setText("File");
@@ -136,7 +143,7 @@ PreparedStatement pst=null;
         jButton6.setBounds(950, 10, 40, 30);
 
         jButton7.setFont(new Font("Arial", Font.BOLD, 13)); // NOI18N
-        jButton7.setIcon(new ImageIcon(MainMenu.class.getResource("/employee/payroll/system/Images/icons8-salary-50.png"))); // NOI18N
+        jButton7.setIcon(new ImageIcon(MainMenu3.class.getResource("/employee/payroll/system/Images/icons8-salary-50.png"))); // NOI18N
         jButton7.setText("Salary");
         jButton7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -147,7 +154,7 @@ PreparedStatement pst=null;
         jButton7.setBounds(730, 524, 197, 57);
 
         jButton3.setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
-        jButton3.setIcon(new ImageIcon(MainMenu.class.getResource("/employee/payroll/system/Images/icons8-minus-30.png"))); // NOI18N
+        jButton3.setIcon(new ImageIcon(MainMenu3.class.getResource("/employee/payroll/system/Images/icons8-minus-30.png"))); // NOI18N
         jButton3.setText("Deductions");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -158,7 +165,7 @@ PreparedStatement pst=null;
         jButton3.setBounds(730, 370, 197, 57);
 
         jButton2.setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
-        jButton2.setIcon(new ImageIcon(MainMenu.class.getResource("/employee/payroll/system/Images/icons8-loan-50.png"))); // NOI18N
+        jButton2.setIcon(new ImageIcon(MainMenu3.class.getResource("/employee/payroll/system/Images/icons8-loan-50.png"))); // NOI18N
         jButton2.setText("Allowance");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -169,7 +176,7 @@ PreparedStatement pst=null;
         jButton2.setBounds(730, 302, 197, 57);
 
         add_employee.setFont(new Font("Arial", Font.BOLD, 10)); // NOI18N
-        add_employee.setIcon(new ImageIcon(MainMenu.class.getResource("/employee/payroll/system/Images/icons8-employee-preferences-50.png"))); // NOI18N
+        add_employee.setIcon(new ImageIcon(MainMenu3.class.getResource("/employee/payroll/system/Images/icons8-employee-preferences-50.png"))); // NOI18N
         add_employee.setText("Employee Manager");
         add_employee.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -180,7 +187,7 @@ PreparedStatement pst=null;
         add_employee.setBounds(730, 60, 197, 57);
 
         jButton4.setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
-        jButton4.setIcon(new ImageIcon(MainMenu.class.getResource("/employee/payroll/system/Images/icons8-overtime-50.png"))); // NOI18N
+        jButton4.setIcon(new ImageIcon(MainMenu3.class.getResource("/employee/payroll/system/Images/icons8-overtime-50.png"))); // NOI18N
         jButton4.setText("Overtime");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -191,7 +198,7 @@ PreparedStatement pst=null;
         jButton4.setBounds(730, 220, 197, 57);
 
         jButton5.setFont(new Font("Arial", Font.BOLD, 10)); // NOI18N
-        jButton5.setIcon(new ImageIcon(MainMenu.class.getResource("/employee/payroll/system/Images/icons8-view-50.png"))); // NOI18N
+        jButton5.setIcon(new ImageIcon(MainMenu3.class.getResource("/employee/payroll/system/Images/icons8-view-50.png"))); // NOI18N
         jButton5.setText("View Leave Request");
         jButton5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -209,7 +216,7 @@ PreparedStatement pst=null;
         jPanel2.add(txt_emp);
         txt_emp.setBounds(90, 590, 80, 16);
 
-        jLabel3.setIcon(new ImageIcon(MainMenu.class.getResource("/employee/payroll/system/Images/motorph.jpg"))); // NOI18N
+        jLabel3.setIcon(new ImageIcon(MainMenu3.class.getResource("/employee/payroll/system/Images/motorph.jpg"))); // NOI18N
         jPanel2.add(jLabel3);
         jLabel3.setBounds(0, 0, 680, 620);
 
@@ -272,7 +279,7 @@ PreparedStatement pst=null;
 
     private void jMenuItem5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem5ActionPerformed
         // TODO add your handling code here:
-        changeLog x = new changeLog();
+        changeLog1 x = new changeLog1();
         x.setVisible(true);
         
         
@@ -395,18 +402,18 @@ PreparedStatement pst=null;
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(MainMenu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MainMenu3.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(MainMenu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MainMenu3.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(MainMenu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MainMenu3.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(MainMenu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MainMenu3.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
       
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new MainMenu().setVisible(true);
+                new MainMenu3().setVisible(true);
             }
         });
     }
