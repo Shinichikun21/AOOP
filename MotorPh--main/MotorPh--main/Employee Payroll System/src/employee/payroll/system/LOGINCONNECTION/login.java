@@ -11,6 +11,7 @@ package employee.payroll.system.LOGINCONNECTION;
  */
 
 import employee.payroll.system.MainMenu;
+import employee.payroll.system.PasswordRequestPage;
 import employee.payroll.system.EMPLOYEACCESS.MainMenu1;
 import employee.payroll.system.HR.MainMenu3;
 import employee.payroll.system.PAYROLLMANAGER.MainMenu2;
@@ -26,6 +27,8 @@ import javax.swing.*;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 @SuppressWarnings("serial")
 public class login extends javax.swing.JFrame {
 Connection conn=null;
@@ -90,6 +93,8 @@ PreparedStatement pst=null;
         txt_combo.setFont(new Font("Tahoma", Font.BOLD, 11));
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
+        jLabel4.setBackground(new Color(255, 255, 255));
+        jLabel4.setForeground(new Color(255, 255, 255));
 
         jMenuItem1.setText("jMenuItem1");
 
@@ -115,6 +120,19 @@ PreparedStatement pst=null;
                 cmd_LoginKeyPressed(evt);
             }
         });
+        
+        JButton btnNewButton = new JButton("Reset Password");
+        btnNewButton.setFont(new Font("Tahoma", Font.PLAIN, 10));
+        btnNewButton.addActionListener(new ActionListener() {
+        	public void actionPerformed(ActionEvent e) {
+        		   PasswordRequestPage x = new PasswordRequestPage();
+        		    x.setVisible(true);
+        		}
+        	}
+        );
+        btnNewButton.setForeground(new Color(0, 0, 0));
+        btnNewButton.setBounds(38, 468, 116, 23);
+        jPanel2.add(btnNewButton);
         jPanel2.add(cmd_Login);
         cmd_Login.setBounds(576, 461, 70, 30);
 
@@ -621,5 +639,4 @@ PreparedStatement pst=null;
 	private javax.swing.JComboBox txt_combo;
     private javax.swing.JPasswordField txt_password;
     private javax.swing.JTextField txt_username;
-    // End of variables declaration//GEN-END:variables
 }
