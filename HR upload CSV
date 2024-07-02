@@ -1,0 +1,82 @@
+import javax.swing.*;
+import java.awt.*;
+import java.io.File;
+
+public class HRManagerUI {
+
+    private boolean isHRManager = false; // Example: Change this based on login credentials
+
+    public static void main(String[] args) {
+        SwingUtilities.invokeLater(() -> {
+            new HRManagerUI().createAndShowGUI();
+        });
+    }
+
+    private void createAndShowGUI() {
+        JFrame frame = new JFrame("HR Manager UI");
+        frame.setSize(1200, 800);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        JPanel mainPanel = new JPanel(new BorderLayout());
+
+        // Employee Panel
+        JPanel employeePanel = createEmployeePanel();
+        mainPanel.add(employeePanel, BorderLayout.CENTER);
+
+        // Upload CSV Button (Initially hidden for non-HR managers)
+        JButton uploadCSVButton = new JButton("Upload CSV");
+        uploadCSVButton.setFont(new Font("jsMath-cmbx10", Font.BOLD, 20));
+        uploadCSVButton.setBackground(new Color(0xFDFAFA));
+        uploadCSVButton.setBorder(BorderFactory.createLineBorder(Color.BLACK, 2, true));
+        uploadCSVButton.addActionListener(e -> {
+            if (isHRManager) {
+                JFileChooser fileChooser = new JFileChooser();
+                fileChooser.setDialogTitle("Choose CSV File");
+                fileChooser.setFileSelectionMode(JFileChooser.FILES_ONLY);
+                int option = fileChooser.showOpenDialog(frame);
+
+                if (option == JFileChooser.APPROVE_OPTION) {
+                    File selectedFile = fileChooser.getSelectedFile();
+                    handleCSVFile(selectedFile);
+                }
+            } else {
+                JOptionPane.showMessageDialog(frame, "You do not have permission to upload CSV files.");
+            }
+        });
+
+        // Add the Upload CSV Button to the Employee Panel
+        JPanel buttonPanel = new JPanel();
+        buttonPanel.add(uploadCSVButton);
+        employeePanel.add(buttonPanel, BorderLayout.SOUTH);
+
+        frame.add(mainPanel);
+        frame.setVisible(true);
+    }
+
+    private JPanel createEmployeePanel() {
+        JPanel panel = new JPanel(new BorderLayout());
+        panel.setBackground(new Color(0xFFFBFB));
+
+        JLabel titleLabel = new JLabel("Employee Panel");
+        titleLabel.setFont(new Font("jsMath-cmbx10", Font.BOLD, 40));
+        titleLabel.setHorizontalAlignment(SwingConstants.CENTER);
+        panel.add(titleLabel, BorderLayout.NORTH);
+
+        JTextArea employeeContent = new JTextArea("Employee details and functionality go here...");
+        employeeContent.setFont(new Font("jsMath-cmbx10", Font.PLAIN, 18));
+        employeeContent.setEditable(false);
+        JScrollPane scrollPane = new JScrollPane(employeeContent);
+        panel.add(scrollPane, BorderLayout.CENTER);
+
+        return panel;
+    }
+
+    private void handleCSVFile(File file) {
+        if (file != null) {
+            JOptionPane.showMessageDialog(null, "Uploaded file: " + file.getName());
+            // Implement your CSV handling logic here (e.g., parsing, processing)
+        } else {
+            JOptionPane.showMessageDialog(null, "No file selected.");
+        }
+    }
+}
