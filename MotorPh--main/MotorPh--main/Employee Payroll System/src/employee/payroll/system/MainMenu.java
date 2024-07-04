@@ -97,19 +97,6 @@ public class MainMenu extends javax.swing.JFrame {
                 jButton6ActionPerformed(evt);
             }
         });
-        
-        // Adding the CSV Uploader button
-        JButton csvUploadButton = new JButton();
-        csvUploadButton.setIcon(new ImageIcon(MainMenu.class.getResource("/employee/payroll/system/Images/icons8-upload-32.png")));
-        csvUploadButton.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                CSVUploader.createAndShowGUI();
-            }
-        });
-        csvUploadButton.setText("Upload CSV");
-        csvUploadButton.setFont(new Font("Arial", Font.BOLD, 13));
-        csvUploadButton.setBounds(730, 549, 197, 57);
-        jPanel2.add(csvUploadButton);
 
         lblWhatWouldYou = new JLabel("What would you like to do?");
         lblWhatWouldYou.setToolTipText("Welcome!");
@@ -210,7 +197,7 @@ public class MainMenu extends javax.swing.JFrame {
 
         jTextField1.setText("jTextField1");
 
-        jMenu1.setText("File");
+        jMenu1.setText("Logout");
 
         jMenuItem1.setIcon(new ImageIcon(MainMenu.class.getResource("/employee/payroll/system/Images/Exit.png"))); // NOI18N
         jMenuItem1.setText("Logout");
@@ -233,9 +220,7 @@ public class MainMenu extends javax.swing.JFrame {
             }
         });
         btn_menu.add(jMenuItem13);
-
-        jMenuItem5.setIcon(new ImageIcon(MainMenu.class.getResource("/employee/payroll/system/Images/logout.png"))); // NOI18N
-        jMenuItem5.setText("Audit");
+        jMenuItem5.setText("changeLog");
         jMenuItem5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItem5ActionPerformed(evt);
@@ -248,10 +233,6 @@ public class MainMenu extends javax.swing.JFrame {
                   CSVUploader.createAndShowGUI();
               }
           });
-          csvUploadButton.setText("Upload CSV");
-          csvUploadButton.setFont(new Font("Arial", Font.BOLD, 13));
-          csvUploadButton.setBounds(730, 549, 197, 57);
-          jPanel2.add(csvUploadButton);
         
         mntmNewMenuItem.setIcon(new ImageIcon(MainMenu.class.getResource("/employee/payroll/system/Images/Add_Employee.png")));
         btn_menu.add(mntmNewMenuItem);
@@ -295,7 +276,7 @@ public class MainMenu extends javax.swing.JFrame {
 
     private void jMenuItem5ActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
-        Audit y = new Audit();
+        changeLog y = new changeLog();
         y.setVisible(true);
     }
 
