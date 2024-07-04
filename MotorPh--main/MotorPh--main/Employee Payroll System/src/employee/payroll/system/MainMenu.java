@@ -26,6 +26,7 @@ import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.SwingConstants;
+import javax.swing.JMenuItem;
 
 public class MainMenu extends javax.swing.JFrame {
     /**
@@ -46,19 +47,6 @@ public class MainMenu extends javax.swing.JFrame {
         Dimension size = toolkit.getScreenSize();
         setLocation(size.width / 2 - getWidth() / 2, size.height / 2 - getHeight() / 2);
         txt_emp.setText(String.valueOf(Emp.empId));
-        
-        // Adding the CSV Uploader button
-        JButton csvUploadButton = new JButton();
-        csvUploadButton.setIcon(new ImageIcon(MainMenu.class.getResource("/employee/payroll/system/Images/icons8-upload-32.png")));
-        csvUploadButton.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                CSVUploader.createAndShowGUI();
-            }
-        });
-        csvUploadButton.setText("Upload CSV");
-        csvUploadButton.setFont(new Font("Arial", Font.BOLD, 13));
-        csvUploadButton.setBounds(730, 586, 197, 57);
-        jPanel2.add(csvUploadButton);
     }
 
     // Auto-generated code for initializing components
@@ -109,6 +97,19 @@ public class MainMenu extends javax.swing.JFrame {
                 jButton6ActionPerformed(evt);
             }
         });
+        
+        // Adding the CSV Uploader button
+        JButton csvUploadButton = new JButton();
+        csvUploadButton.setIcon(new ImageIcon(MainMenu.class.getResource("/employee/payroll/system/Images/icons8-upload-32.png")));
+        csvUploadButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                CSVUploader.createAndShowGUI();
+            }
+        });
+        csvUploadButton.setText("Upload CSV");
+        csvUploadButton.setFont(new Font("Arial", Font.BOLD, 13));
+        csvUploadButton.setBounds(730, 549, 197, 57);
+        jPanel2.add(csvUploadButton);
 
         lblWhatWouldYou = new JLabel("What would you like to do?");
         lblWhatWouldYou.setToolTipText("Welcome!");
@@ -137,7 +138,7 @@ public class MainMenu extends javax.swing.JFrame {
             }
         });
         jPanel2.add(jButton7);
-        jButton7.setBounds(730, 524, 197, 57);
+        jButton7.setBounds(730, 471, 197, 57);
 
         jButton3.setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         jButton3.setIcon(new ImageIcon(MainMenu.class.getResource("/employee/payroll/system/Images/icons8-minus-30.png"))); // NOI18N
@@ -148,7 +149,7 @@ public class MainMenu extends javax.swing.JFrame {
             }
         });
         jPanel2.add(jButton3);
-        jButton3.setBounds(730, 370, 197, 57);
+        jButton3.setBounds(730, 304, 197, 57);
 
         jButton2.setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
         jButton2.setIcon(new ImageIcon(MainMenu.class.getResource("/employee/payroll/system/Images/icons8-loan-50.png"))); // NOI18N
@@ -159,7 +160,7 @@ public class MainMenu extends javax.swing.JFrame {
             }
         });
         jPanel2.add(jButton2);
-        jButton2.setBounds(730, 302, 197, 57);
+        jButton2.setBounds(730, 223, 197, 57);
 
         add_employee.setFont(new Font("Arial", Font.BOLD, 10)); // NOI18N
         add_employee.setIcon(new ImageIcon(MainMenu.class.getResource("/employee/payroll/system/Images/icons8-employee-preferences-50.png"))); // NOI18N
@@ -181,7 +182,7 @@ public class MainMenu extends javax.swing.JFrame {
             }
         });
         jPanel2.add(jButton4);
-        jButton4.setBounds(730, 220, 197, 57);
+        jButton4.setBounds(730, 141, 197, 57);
 
         jButton5.setFont(new Font("Arial", Font.BOLD, 10)); // NOI18N
         jButton5.setIcon(new ImageIcon(MainMenu.class.getResource("/employee/payroll/system/Images/icons8-view-50.png"))); // NOI18N
@@ -192,7 +193,7 @@ public class MainMenu extends javax.swing.JFrame {
             }
         });
         jPanel2.add(jButton5);
-        jButton5.setBounds(730, 448, 197, 57);
+        jButton5.setBounds(730, 388, 197, 57);
 
         jLabel1.setText("Logged in As :");
         jPanel2.add(jLabel1);
@@ -240,6 +241,20 @@ public class MainMenu extends javax.swing.JFrame {
                 jMenuItem5ActionPerformed(evt);
             }
         });
+        
+        JMenuItem mntmNewMenuItem = new JMenuItem("Add Multiple Employees");
+        mntmNewMenuItem.addActionListener(new ActionListener() {
+        	  public void actionPerformed(ActionEvent e) {
+                  CSVUploader.createAndShowGUI();
+              }
+          });
+          csvUploadButton.setText("Upload CSV");
+          csvUploadButton.setFont(new Font("Arial", Font.BOLD, 13));
+          csvUploadButton.setBounds(730, 549, 197, 57);
+          jPanel2.add(csvUploadButton);
+        
+        mntmNewMenuItem.setIcon(new ImageIcon(MainMenu.class.getResource("/employee/payroll/system/Images/Add_Employee.png")));
+        btn_menu.add(mntmNewMenuItem);
         btn_menu.add(jMenuItem5);
 
         jMenuBar1.add(btn_menu);
