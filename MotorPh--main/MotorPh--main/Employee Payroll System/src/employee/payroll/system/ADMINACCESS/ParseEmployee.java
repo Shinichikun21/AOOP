@@ -1,9 +1,8 @@
 package employee.payroll.system.ADMINACCESS;
 
 import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
 
-public class Employee {
+public class ParseEmployee {
     private int employeeNumber;
     private String lastName;
     private String firstName;
@@ -24,7 +23,7 @@ public class Employee {
     private double grossSemiMonthlyRate;
     private double hourlyRate;
 
-    public Employee(int employeeNumber, String lastName, String firstName, LocalDate birthday, String address, String phoneNumber, String sssNumber, String philhealthNumber, String tinNumber, String pagIbigNumber, String status, String position, String immediateSupervisor, double basicSalary, double riceSubsidy, double phoneAllowance, double clothingAllowance, double grossSemiMonthlyRate, double hourlyRate) {
+    public ParseEmployee(int employeeNumber, String lastName, String firstName, LocalDate birthday, String address, String phoneNumber, String sssNumber, String philhealthNumber, String tinNumber, String pagIbigNumber, String status, String position, String immediateSupervisor, double basicSalary, double riceSubsidy, double phoneAllowance, double clothingAllowance, double grossSemiMonthlyRate, double hourlyRate) {
         this.employeeNumber = employeeNumber;
         this.lastName = lastName;
         this.firstName = firstName;
@@ -198,7 +197,6 @@ public class Employee {
         this.hourlyRate = hourlyRate;
     }
 
-    // Method to convert birthday to SQL Date
     public java.sql.Date getSqlBirthday() {
         return java.sql.Date.valueOf(birthday);
     }
@@ -208,4 +206,3 @@ public class Employee {
         return "Employee #" + employeeNumber + ": " + firstName + " " + lastName + " (" + birthday + "), " + position + " under " + immediateSupervisor;
     }
 }
-

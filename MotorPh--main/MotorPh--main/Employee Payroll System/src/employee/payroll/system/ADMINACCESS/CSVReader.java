@@ -9,8 +9,7 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
-import java.util.ArrayList;
-import java.util.List;
+import java.time.format.DateTimeParseException;
 
 public class CSVReader {
     private static final String JDBC_URL = "jdbc:sqlite:employee.db"; // SQLite JDBC URL
@@ -24,7 +23,7 @@ public class CSVReader {
             while ((line = br.readLine()) != null) {
                 try {
                     String[] values = line.split("\t");
-                    Employee employee = parseEmployee(values);
+                    ParseEmployee employee = parseEmployee(values);
                     insertEmployee(conn, employee);
                 } catch (Exception e) {
                     System.err.println("Error processing line: " + line);
@@ -37,7 +36,7 @@ public class CSVReader {
         }
     }
 
-    private static Employee parseEmployee(String[] values) {
+    private static ParseEmployee parseEmployee(String[] values) {
         if (values.length != 19) {
             throw new IllegalArgumentException("Invalid number of fields in CSV line");
         }
@@ -65,13 +64,13 @@ public class CSVReader {
             double grossSemiMonthlyRate = Double.parseDouble(values[17]);
             double hourlyRate = Double.parseDouble(values[18]);
 
-            return new Employee(employeeNumber, lastName, firstName, birthday, address, phoneNumber, sssNumber, philhealthNumber, tinNumber, pagIbigNumber, status, position, immediateSupervisor, basicSalary, riceSubsidy, phoneAllowance, clothingAllowance, grossSemiMonthlyRate, hourlyRate);
+            return new ParseEmployee(employeeNumber, lastName, firstName, birthday, address, phoneNumber, sssNumber, philhealthNumber, tinNumber, pagIbigNumber, status, position, immediateSupervisor, basicSalary, riceSubsidy, phoneAllowance, clothingAllowance, grossSemiMonthlyRate, hourlyRate);
         } catch (NumberFormatException | DateTimeParseException e) {
             throw new IllegalArgumentException("Invalid data format in CSV line", e);
         }
     }
 
-    private static void insertEmployee(Connection conn, Employee employee) throws SQLException {
+    private static void insertEmployee(Connection conn, ParseEmployee employee) throws SQLException {
         String sql = "INSERT INTO tblempdata (empid, lname, fname, address, bday, phnum, sss, philhealth, tin, pagibig, status, position, manager, basic, rice, phallow, clothing, semi, hourly) " +
                      "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 

@@ -11,6 +11,6 @@
 	<classpathentry kind="lib" path="Employee Payroll System/rs2xml.jar"/>
 	<classpathentry kind="lib" path="Employee Payroll System/sqlitejdbc-v056.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
-	<classpathentry kind="lib" path="C:/Users/Default.LAPTOP-FTFP08QI/Downloads/org.mockito.mockito-all_1.9.5.jar"/>
+	<classpathentry kind="lib" path="C:/Users/LAGUI/Documents/GitHub/AOOP/MotorPh--main/MotorPh--main/MotorPh--main/Employee Payroll System/mockito-all-1.9.5.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

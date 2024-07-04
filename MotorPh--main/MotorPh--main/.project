@@ -3,6 +3,7 @@
 	<name>MotorPh--main</name>
 	<comment></comment>
 	<projects>
+		<project>AOOP</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
