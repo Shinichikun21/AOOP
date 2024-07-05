@@ -52,7 +52,9 @@ PreparedStatement pst=null;
         txt_emp.setText(String.valueOf(Emp.empId));
         
         JButton jButton7_1 = new JButton();
-        jButton7_1.setIcon(new ImageIcon(MainMenu2.class.getResource("/employee/payroll/system/Images/icons8-update-32.png")));
+        jButton7_1.setForeground(new Color(255, 255, 255));
+        jButton7_1.setBackground(new Color(0, 128, 255));
+        jButton7_1.setIcon(new ImageIcon(MainMenu2.class.getResource("/employee/payroll/system/Images/icons8-update-50.png")));
         jButton7_1.addActionListener(new ActionListener() {
         	public void actionPerformed(ActionEvent e) {
         		  updateSalary x = new updateSalary();
@@ -80,17 +82,29 @@ PreparedStatement pst=null;
         jMenu4 = new javax.swing.JMenu();
         jPanel2 = new javax.swing.JPanel();
         jButton6 = new javax.swing.JButton();
+        jButton6.setBackground(new Color(255, 255, 255));
         jButton7 = new javax.swing.JButton();
+        jButton7.setForeground(new Color(255, 255, 255));
         jButton3 = new javax.swing.JButton();
+        jButton3.setForeground(new Color(255, 255, 255));
+        jButton3.setBackground(new Color(0, 128, 255));
         jButton2 = new javax.swing.JButton();
+        jButton2.setForeground(new Color(255, 255, 255));
+        jButton2.setBackground(new Color(0, 128, 255));
         add_employee = new javax.swing.JButton();
+        add_employee.setForeground(new Color(255, 255, 255));
+        add_employee.setBackground(new Color(0, 128, 255));
         add_employee.setEnabled(false);
         jButton4 = new javax.swing.JButton();
+        jButton4.setForeground(new Color(255, 255, 255));
+        jButton4.setBackground(new Color(0, 128, 255));
         jButton4.setEnabled(false);
         jButton5 = new javax.swing.JButton();
         jButton5.setEnabled(false);
         jLabel1 = new javax.swing.JLabel();
+        jLabel1.setForeground(new Color(255, 255, 255));
         txt_emp = new javax.swing.JLabel();
+        txt_emp.setForeground(new Color(255, 255, 255));
         jLabel3 = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
         jMenuBar1 = new javax.swing.JMenuBar();
@@ -111,7 +125,7 @@ PreparedStatement pst=null;
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setResizable(false);
 
-        jPanel2.setBackground(new Color(0, 0, 0));
+        jPanel2.setBackground(new Color(80, 156, 241));
         jPanel2.setLayout(null);
 
         jButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/employee/payroll/system/Images/logout.png"))); // NOI18N
@@ -124,7 +138,7 @@ PreparedStatement pst=null;
         lblWhatWouldYou = new JLabel("What would you like to do?");
         lblWhatWouldYou.setToolTipText("Welcome!");
         lblWhatWouldYou.setHorizontalAlignment(SwingConstants.CENTER);
-        lblWhatWouldYou.setForeground(Color.BLACK);
+        lblWhatWouldYou.setForeground(new Color(255, 255, 255));
         lblWhatWouldYou.setFont(new Font("Tahoma", Font.BOLD, 16));
         lblWhatWouldYou.setBounds(166, 10, 235, 30);
         jPanel2.add(lblWhatWouldYou);
@@ -133,7 +147,7 @@ PreparedStatement pst=null;
         lblNewLabel.setToolTipText("Welcome!");
         lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 16));
         lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
-        lblNewLabel.setForeground(new Color(0, 128, 128));
+        lblNewLabel.setForeground(new Color(255, 255, 255));
         lblNewLabel.setBounds(32, 10, 138, 30);
         jPanel2.add(lblNewLabel);
         jPanel2.add(jButton6);
@@ -151,7 +165,7 @@ PreparedStatement pst=null;
         jButton7.setBounds(730, 524, 197, 57);
 
         jButton3.setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
-        jButton3.setIcon(new ImageIcon(MainMenu2.class.getResource("/employee/payroll/system/Images/icons8-minus-30.png"))); // NOI18N
+        jButton3.setIcon(new ImageIcon(MainMenu2.class.getResource("/employee/payroll/system/Images/icons8-tax-50.png"))); // NOI18N
         jButton3.setText("Deductions");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -162,7 +176,7 @@ PreparedStatement pst=null;
         jButton3.setBounds(730, 370, 197, 57);
 
         jButton2.setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
-        jButton2.setIcon(new ImageIcon(MainMenu2.class.getResource("/employee/payroll/system/Images/icons8-loan-50.png"))); // NOI18N
+        jButton2.setIcon(new ImageIcon(MainMenu2.class.getResource("/employee/payroll/system/Images/icons8-cash-50.png"))); // NOI18N
         jButton2.setText("Allowance");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -173,7 +187,7 @@ PreparedStatement pst=null;
         jButton2.setBounds(730, 302, 197, 57);
 
         add_employee.setFont(new Font("Arial", Font.BOLD, 10)); // NOI18N
-        add_employee.setIcon(new ImageIcon(MainMenu2.class.getResource("/employee/payroll/system/Images/icons8-employee-preferences-50.png"))); // NOI18N
+        add_employee.setIcon(new ImageIcon(MainMenu2.class.getResource("/employee/payroll/system/Images/icons8-employee-50.png"))); // NOI18N
         add_employee.setText("Employee Manager");
         add_employee.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -184,7 +198,7 @@ PreparedStatement pst=null;
         add_employee.setBounds(730, 60, 197, 57);
 
         jButton4.setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
-        jButton4.setIcon(new ImageIcon(MainMenu2.class.getResource("/employee/payroll/system/Images/icons8-overtime-50.png"))); // NOI18N
+        jButton4.setIcon(new ImageIcon(MainMenu2.class.getResource("/employee/payroll/system/Images/icons8-time-50.png"))); // NOI18N
         jButton4.setText("Overtime");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -195,7 +209,7 @@ PreparedStatement pst=null;
         jButton4.setBounds(730, 220, 197, 57);
 
         jButton5.setFont(new Font("Arial", Font.BOLD, 10)); // NOI18N
-        jButton5.setIcon(new ImageIcon(MainMenu2.class.getResource("/employee/payroll/system/Images/icons8-view-50.png"))); // NOI18N
+        jButton5.setIcon(new ImageIcon(MainMenu2.class.getResource("/employee/payroll/system/Images/icons8-leave-50.png"))); // NOI18N
         jButton5.setText("View Leave Request");
         jButton5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -213,7 +227,7 @@ PreparedStatement pst=null;
         jPanel2.add(txt_emp);
         txt_emp.setBounds(90, 590, 80, 16);
 
-        jLabel3.setIcon(new ImageIcon(MainMenu2.class.getResource("/employee/payroll/system/Images/motorph.jpg"))); // NOI18N
+        jLabel3.setIcon(new ImageIcon(MainMenu2.class.getResource("/employee/payroll/system/Images/MOtorPh.png"))); // NOI18N
         jPanel2.add(jLabel3);
         jLabel3.setBounds(0, 0, 680, 620);
 

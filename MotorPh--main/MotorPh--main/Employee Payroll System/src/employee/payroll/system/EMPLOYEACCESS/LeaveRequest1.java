@@ -32,7 +32,7 @@ public class LeaveRequest1 extends javax.swing.JFrame {
      * Creates new form LeaveRequest
      */
      public LeaveRequest1() {
-    	getContentPane().setBackground(new Color(164, 198, 255));
+    	getContentPane().setBackground(new Color(80, 156, 241));
         initComponents();
         conn=db.java_db();
         Toolkit toolkit = getToolkit();

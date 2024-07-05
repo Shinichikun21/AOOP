@@ -27,6 +27,8 @@ import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.SwingConstants;
 import javax.swing.JMenuItem;
+import javax.swing.GroupLayout.Alignment;
+import javax.swing.GroupLayout;
 
 public class MainMenu extends javax.swing.JFrame {
     /**
@@ -58,19 +60,30 @@ public class MainMenu extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         jButton6 = new javax.swing.JButton();
         jButton7 = new javax.swing.JButton();
+        jButton7.setForeground(new Color(255, 255, 255));
+        jButton7.setBackground(new Color(0, 128, 255));
         jButton7.setEnabled(false);
         jButton3 = new javax.swing.JButton();
+        jButton3.setForeground(new Color(255, 255, 255));
+        jButton3.setBackground(new Color(0, 128, 255));
         jButton3.setEnabled(false);
         jButton2 = new javax.swing.JButton();
+        jButton2.setForeground(new Color(255, 255, 255));
+        jButton2.setBackground(new Color(0, 128, 255));
         jButton2.setEnabled(false);
         add_employee = new javax.swing.JButton();
+        add_employee.setForeground(new Color(255, 255, 255));
+        add_employee.setBackground(new Color(0, 128, 255));
         jButton4 = new javax.swing.JButton();
+        jButton4.setForeground(new Color(255, 255, 255));
+        jButton4.setBackground(new Color(0, 128, 255));
         jButton4.setEnabled(false);
         jButton5 = new javax.swing.JButton();
+        jButton5.setForeground(new Color(255, 255, 255));
+        jButton5.setBackground(new Color(0, 128, 255));
         jButton5.setEnabled(false);
         jLabel1 = new javax.swing.JLabel();
         txt_emp = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
@@ -78,6 +91,7 @@ public class MainMenu extends javax.swing.JFrame {
         btn_menu = new javax.swing.JMenu();
         jMenuItem13 = new javax.swing.JMenuItem();
         jMenuItem5 = new javax.swing.JMenuItem();
+        jMenuItem5.setIcon(new ImageIcon(MainMenu.class.getResource("/employee/payroll/system/Images/icons8-log-50.png")));
 
         jMenu3.setText("File");
         jMenuBar2.add(jMenu3);
@@ -88,7 +102,7 @@ public class MainMenu extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setResizable(false);
 
-        jPanel2.setBackground(new Color(0, 0, 0));
+        jPanel2.setBackground(new Color(80, 156, 241));
         jPanel2.setLayout(null);
 
         jButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/employee/payroll/system/Images/logout.png"))); // NOI18N
@@ -97,11 +111,17 @@ public class MainMenu extends javax.swing.JFrame {
                 jButton6ActionPerformed(evt);
             }
         });
+        jLabel3 = new javax.swing.JLabel();
+        
+                jLabel3.setIcon(new ImageIcon(MainMenu.class.getResource("/employee/payroll/system/Images/MOtorPh.png"))); // NOI18N
+                jLabel3.setText("jLabel3");
+                jPanel2.add(jLabel3);
+                jLabel3.setBounds(0, 0, 680, 620);
 
         lblWhatWouldYou = new JLabel("What would you like to do?");
         lblWhatWouldYou.setToolTipText("Welcome!");
         lblWhatWouldYou.setHorizontalAlignment(SwingConstants.CENTER);
-        lblWhatWouldYou.setForeground(Color.BLACK);
+        lblWhatWouldYou.setForeground(new Color(255, 255, 255));
         lblWhatWouldYou.setFont(new Font("Tahoma", Font.BOLD, 16));
         lblWhatWouldYou.setBounds(166, 10, 235, 30);
         jPanel2.add(lblWhatWouldYou);
@@ -110,7 +130,7 @@ public class MainMenu extends javax.swing.JFrame {
         lblNewLabel.setToolTipText("Welcome!");
         lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 16));
         lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
-        lblNewLabel.setForeground(new Color(0, 128, 128));
+        lblNewLabel.setForeground(new Color(255, 255, 255));
         lblNewLabel.setBounds(32, 10, 138, 30);
         jPanel2.add(lblNewLabel);
         jPanel2.add(jButton6);
@@ -128,7 +148,7 @@ public class MainMenu extends javax.swing.JFrame {
         jButton7.setBounds(730, 471, 197, 57);
 
         jButton3.setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
-        jButton3.setIcon(new ImageIcon(MainMenu.class.getResource("/employee/payroll/system/Images/icons8-minus-30.png"))); // NOI18N
+        jButton3.setIcon(new ImageIcon(MainMenu.class.getResource("/employee/payroll/system/Images/icons8-tax-50.png"))); // NOI18N
         jButton3.setText("Deductions");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -139,7 +159,7 @@ public class MainMenu extends javax.swing.JFrame {
         jButton3.setBounds(730, 304, 197, 57);
 
         jButton2.setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
-        jButton2.setIcon(new ImageIcon(MainMenu.class.getResource("/employee/payroll/system/Images/icons8-loan-50.png"))); // NOI18N
+        jButton2.setIcon(new ImageIcon(MainMenu.class.getResource("/employee/payroll/system/Images/icons8-cash-50.png"))); // NOI18N
         jButton2.setText("Allowance");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -150,7 +170,7 @@ public class MainMenu extends javax.swing.JFrame {
         jButton2.setBounds(730, 223, 197, 57);
 
         add_employee.setFont(new Font("Arial", Font.BOLD, 10)); // NOI18N
-        add_employee.setIcon(new ImageIcon(MainMenu.class.getResource("/employee/payroll/system/Images/icons8-employee-preferences-50.png"))); // NOI18N
+        add_employee.setIcon(new ImageIcon(MainMenu.class.getResource("/employee/payroll/system/Images/icons8-employee-50.png"))); // NOI18N
         add_employee.setText("Employee Manager");
         add_employee.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -161,7 +181,7 @@ public class MainMenu extends javax.swing.JFrame {
         add_employee.setBounds(730, 60, 197, 57);
 
         jButton4.setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
-        jButton4.setIcon(new ImageIcon(MainMenu.class.getResource("/employee/payroll/system/Images/icons8-overtime-50.png"))); // NOI18N
+        jButton4.setIcon(new ImageIcon(MainMenu.class.getResource("/employee/payroll/system/Images/icons8-time-50.png"))); // NOI18N
         jButton4.setText("Overtime");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -172,7 +192,7 @@ public class MainMenu extends javax.swing.JFrame {
         jButton4.setBounds(730, 141, 197, 57);
 
         jButton5.setFont(new Font("Arial", Font.BOLD, 10)); // NOI18N
-        jButton5.setIcon(new ImageIcon(MainMenu.class.getResource("/employee/payroll/system/Images/icons8-view-50.png"))); // NOI18N
+        jButton5.setIcon(new ImageIcon(MainMenu.class.getResource("/employee/payroll/system/Images/icons8-leave-50.png"))); // NOI18N
         jButton5.setText("View Leave Request");
         jButton5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -190,16 +210,11 @@ public class MainMenu extends javax.swing.JFrame {
         jPanel2.add(txt_emp);
         txt_emp.setBounds(90, 590, 80, 16);
 
-        jLabel3.setIcon(new ImageIcon(MainMenu.class.getResource("/employee/payroll/system/Images/JPEG Image.jpg"))); // NOI18N
-        jLabel3.setText("jLabel3");
-        jPanel2.add(jLabel3);
-        jLabel3.setBounds(0, 0, 1000, 630);
-
         jTextField1.setText("jTextField1");
 
         jMenu1.setText("Logout");
 
-        jMenuItem1.setIcon(new ImageIcon(MainMenu.class.getResource("/employee/payroll/system/Images/Exit.png"))); // NOI18N
+        jMenuItem1.setIcon(new ImageIcon(MainMenu.class.getResource("/employee/payroll/system/Images/erase-128.png"))); // NOI18N
         jMenuItem1.setText("Logout");
         jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -230,11 +245,11 @@ public class MainMenu extends javax.swing.JFrame {
         JMenuItem mntmNewMenuItem = new JMenuItem("Add Multiple Employees");
         mntmNewMenuItem.addActionListener(new ActionListener() {
         	  public void actionPerformed(ActionEvent e) {
-                  CSVUploader.createAndShowGUI();
+                  CSVUploader.createAndShowGUI(null);
               }
           });
         
-        mntmNewMenuItem.setIcon(new ImageIcon(MainMenu.class.getResource("/employee/payroll/system/Images/Add_Employee.png")));
+        mntmNewMenuItem.setIcon(new ImageIcon(MainMenu.class.getResource("/employee/payroll/system/Images/icons8-employees-50.png")));
         btn_menu.add(mntmNewMenuItem);
         btn_menu.add(jMenuItem5);
 
@@ -243,15 +258,15 @@ public class MainMenu extends javax.swing.JFrame {
         setJMenuBar(jMenuBar1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 1000, Short.MAX_VALUE)
+        	layout.createParallelGroup(Alignment.LEADING)
+        		.addComponent(jPanel2, GroupLayout.PREFERRED_SIZE, 996, GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 630, Short.MAX_VALUE)
+        	layout.createParallelGroup(Alignment.LEADING)
+        		.addComponent(jPanel2, GroupLayout.PREFERRED_SIZE, 617, GroupLayout.PREFERRED_SIZE)
         );
+        getContentPane().setLayout(layout);
 
         pack();
     }
@@ -271,7 +286,7 @@ public class MainMenu extends javax.swing.JFrame {
         // TODO add your handling code here:
         login x = new login();
         x.setVisible(true);
-        this.dispose();
+       
     }
 
     private void jMenuItem5ActionPerformed(java.awt.event.ActionEvent evt) {
@@ -284,7 +299,7 @@ public class MainMenu extends javax.swing.JFrame {
         // TODO add your handling code here:
         addEmployee add = new addEmployee();
         add.setVisible(true);
-        this.dispose();
+        
     }
 
     private void jMenuItem13ActionPerformed(java.awt.event.ActionEvent evt) {
@@ -297,14 +312,14 @@ public class MainMenu extends javax.swing.JFrame {
         // TODO add your handling code here:
         Deductions d = new Deductions();
         d.setVisible(true);
-        this.dispose();
+        
     }
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
         Allowance a = new Allowance();
         a.setVisible(true);
-        this.dispose();
+        
     }
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {
@@ -318,7 +333,7 @@ public class MainMenu extends javax.swing.JFrame {
         // TODO add your handling code here:
         login x = new login();
         x.setVisible(true);
-        this.dispose();
+        
     }
 
     /**

@@ -38,7 +38,7 @@ PreparedStatement pst=null;
      * Creates new form updateSalary
      */
     public updateSalary() {
-    	getContentPane().setBackground(new Color(167, 199, 245));
+    	getContentPane().setBackground(new Color(80, 156, 241));
         initComponents();
         conn=db.java_db();
         Toolkit toolkit = getToolkit();
@@ -59,12 +59,12 @@ PreparedStatement pst=null;
     private void initComponents() {
 
         jPanel4 = new javax.swing.JPanel();
-        jPanel4.setBackground(new Color(215, 215, 215));
+        jPanel4.setBackground(new Color(164, 198, 255));
         jLabel14 = new javax.swing.JLabel();
         txt_search = new javax.swing.JTextField();
         txt_search.setBackground(new Color(255, 255, 255));
         jPanel1 = new javax.swing.JPanel();
-        jPanel1.setBackground(new Color(215, 215, 215));
+        jPanel1.setBackground(new Color(164, 198, 255));
         txt_empid = new javax.swing.JTextField();
         txt_empid.setBackground(new Color(255, 255, 255));
         txt_dob = new javax.swing.JTextField();

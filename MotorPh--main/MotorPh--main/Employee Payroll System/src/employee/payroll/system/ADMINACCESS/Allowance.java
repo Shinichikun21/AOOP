@@ -35,7 +35,7 @@ PreparedStatement pst=null;
      * Creates new form Allowance
      */
     public Allowance() {
-    	getContentPane().setBackground(new Color(164, 198, 255));
+    	getContentPane().setBackground(new Color(80, 156, 241));
         initComponents();
         conn=db.java_db();
         Update_table();
@@ -88,7 +88,7 @@ PreparedStatement pst=null;
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jPanel1.setBackground(new Color(215, 215, 215));
+        jPanel1.setBackground(new Color(164, 198, 255));
         txt_id = new javax.swing.JTextField();
         txt_dob = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
@@ -104,7 +104,7 @@ PreparedStatement pst=null;
         jLabel15 = new javax.swing.JLabel();
         txt_empid = new javax.swing.JTextField();
         jPanel2 = new javax.swing.JPanel();
-        jPanel2.setBackground(new Color(215, 215, 215));
+        jPanel2.setBackground(new Color(164, 198, 255));
         t_clothing = new javax.swing.JTextField();
         txt_phone = new javax.swing.JTextField();
         txt_bonus = new javax.swing.JTextField();
@@ -126,7 +126,7 @@ PreparedStatement pst=null;
         jButton2.setForeground(Color.BLACK);
         jButton2.setBackground(Color.WHITE);
         jPanel4 = new javax.swing.JPanel();
-        jPanel4.setBackground(new Color(215, 215, 215));
+        jPanel4.setBackground(new Color(164, 198, 255));
         jLabel14 = new javax.swing.JLabel();
         txt_search = new javax.swing.JTextField();
         txt_emp = new javax.swing.JLabel();

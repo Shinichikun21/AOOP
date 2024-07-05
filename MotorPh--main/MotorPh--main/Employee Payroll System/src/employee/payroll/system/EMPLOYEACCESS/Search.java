@@ -41,7 +41,7 @@ PreparedStatement pst=null;
      * Creates new form Staff_details
      */
     public Search() {
-    	getContentPane().setBackground(new Color(164, 198, 255));
+    	getContentPane().setBackground(new Color(80, 156, 241));
         initComponents();
         conn=db.java_db();
         Toolkit toolkit = getToolkit();
@@ -158,7 +158,7 @@ PreparedStatement pst=null;
         jMenu1 = new javax.swing.JMenu();
         jMenu2 = new javax.swing.JMenu();
         jPanel3 = new javax.swing.JPanel();
-        jPanel3.setBackground(new Color(215, 215, 215));
+        jPanel3.setBackground(new Color(167, 199, 248));
         jLabel7 = new javax.swing.JLabel();
         txt_contacts = new javax.swing.JTextField();
         txt_contacts.setBackground(new Color(255, 255, 255));
@@ -323,7 +323,7 @@ PreparedStatement pst=null;
             }
         });
 
-        jButton1.setIcon(new ImageIcon(Search.class.getResource("/employee/payroll/system/Images/icons8-clear-32.png"))); // NOI18N
+        jButton1.setIcon(new ImageIcon(Search.class.getResource("/employee/payroll/system/Images/icons8-erase-32.png"))); // NOI18N
         jButton1.setText("Clear");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

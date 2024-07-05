@@ -35,7 +35,7 @@ PreparedStatement pst=null;
      * Creates new form employeeDeductions
      */
     public employeeDeductions() {
-    	getContentPane().setBackground(new Color(164, 198, 255));
+    	getContentPane().setBackground(new Color(80, 156, 241));
         initComponents();
          conn=db.java_db();
          
@@ -85,6 +85,7 @@ PreparedStatement pst=null;
         txt_id = new javax.swing.JTextField();
         txt_id.setBackground(new Color(255, 255, 255));
         jPanel4 = new javax.swing.JPanel();
+        jPanel4.setBackground(new Color(164, 198, 255));
         jLabel11 = new javax.swing.JLabel();
         txt_search = new javax.swing.JTextField();
         txt_firstname = new javax.swing.JTextField();

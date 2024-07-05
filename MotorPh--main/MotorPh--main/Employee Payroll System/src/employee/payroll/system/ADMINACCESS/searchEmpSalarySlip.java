@@ -40,7 +40,7 @@ PreparedStatement pst=null;
      * Creates new form searchEmpSalarySlip
      */
     public searchEmpSalarySlip() {
-    	getContentPane().setBackground(new Color(164, 198, 255));
+    	getContentPane().setBackground(new Color(80, 156, 241));
         initComponents();
         conn=db.java_db();
          Toolkit toolkit = getToolkit();
@@ -60,6 +60,7 @@ PreparedStatement pst=null;
 
         jLabel3 = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
+        jPanel4.setBackground(new Color(164, 198, 255));
         jLabel11 = new javax.swing.JLabel();
         txt_search = new javax.swing.JTextField();
         txt_search.setBackground(new Color(255, 255, 255));
@@ -94,6 +95,7 @@ PreparedStatement pst=null;
         jLabel17 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
+        jButton1.setBackground(new Color(255, 255, 255));
         jLabel12 = new javax.swing.JLabel();
         txt_id = new javax.swing.JTextField();
         txt_id.setBackground(new Color(255, 255, 255));

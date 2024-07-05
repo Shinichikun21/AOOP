@@ -37,7 +37,7 @@ public class Overtime extends javax.swing.JFrame {
      * Creates new form LeaveRequest
      */
      public Overtime() {
-    	getContentPane().setBackground(new Color(167, 199, 245));
+    	getContentPane().setBackground(new Color(80, 156, 241));
         initComponents();
         conn=db.java_db();
         Toolkit toolkit = getToolkit();
@@ -129,10 +129,10 @@ public class Overtime extends javax.swing.JFrame {
         txt_start = new javax.swing.JTextField();
         lbl_accept = new javax.swing.JButton();
         lbl_accept.setForeground(new Color(0, 0, 0));
-        lbl_accept.setBackground(new Color(119, 191, 142));
+        lbl_accept.setBackground(new Color(192, 192, 192));
         lbl_decline = new javax.swing.JButton();
         lbl_decline.setForeground(new Color(0, 0, 0));
-        lbl_decline.setBackground(new Color(255, 128, 128));
+        lbl_decline.setBackground(new Color(192, 192, 192));
         Status = new javax.swing.JLabel();
         Status.setForeground(new Color(0, 0, 0));
         txt_status = new javax.swing.JTextField();
@@ -149,7 +149,7 @@ public class Overtime extends javax.swing.JFrame {
         txt_empid = new javax.swing.JTextField();
         jButton2 = new javax.swing.JButton();
         jButton2.setForeground(new Color(0, 0, 0));
-        jButton2.setBackground(new Color(252, 131, 124));
+        jButton2.setBackground(new Color(192, 192, 192));
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 

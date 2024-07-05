@@ -4,6 +4,10 @@ import employee.payroll.system.MainMenu;
 import employee.payroll.system.LOGINCONNECTION.db;
 
 import javax.swing.*;
+
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
+import java.awt.event.WindowListener;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -15,17 +19,32 @@ import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
 
 public class CSVUploader {
-    public static void createAndShowGUI() {
-        JFrame frame = new JFrame("CSV Uploader");
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(400, 200);
+    
 
-        JPanel panel = new JPanel();
-        frame.add(panel);
-        placeComponents(panel, frame);
+	public static void createAndShowGUI(MainMenu mainMenu) { // Pass the MainMenu instance
+	    JFrame frame = new JFrame("CSV Uploader");
+	    // Use WindowConstants.DISPOSE_ON_CLOSE to close only the CSVUploader
+	    frame.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE); 
+	    frame.setSize(400, 200);
 
-        frame.setVisible(true);
-    }
+	    JPanel panel = new JPanel();
+	    frame.add(panel);
+	    placeComponents(panel, frame);
+
+	    frame.setVisible(true);
+	}
+
+	    private static WindowListener CustomWindowClosing(MainMenu mainMenu) {
+	        return new WindowAdapter() {
+	            @Override
+	            public void windowClosing(WindowEvent e) {
+	                ((JFrame) e.getSource()).dispose(); // Dispose only the CSVUploader frame
+	            }
+	        };
+	    }
+
+	    
+
 
     private static void placeComponents(JPanel panel, JFrame frame) {
         panel.setLayout(null);

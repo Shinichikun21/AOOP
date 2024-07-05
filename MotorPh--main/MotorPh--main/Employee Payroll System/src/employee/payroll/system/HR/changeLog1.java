@@ -27,6 +27,7 @@ PreparedStatement pst=null;
      * Creates new form Audit_details
      */
     public changeLog1() {
+    	getContentPane().setBackground(new Color(80, 156, 241));
         initComponents();
         conn=db.java_db();
         Toolkit toolkit = getToolkit();
@@ -78,11 +79,13 @@ PreparedStatement pst=null;
     private void initComponents() {
 
         jPanel3 = new javax.swing.JPanel();
+        jPanel3.setBackground(new Color(167, 199, 248));
         jScrollPane3 = new javax.swing.JScrollPane();
         tbl_3 = new javax.swing.JTable();
         jButton1 = new javax.swing.JButton();
         jButton1.setEnabled(false);
         jPanel4 = new javax.swing.JPanel();
+        jPanel4.setBackground(new Color(167, 199, 248));
         jLabel2 = new javax.swing.JLabel();
         txt_search = new javax.swing.JTextField();
 
@@ -104,7 +107,7 @@ PreparedStatement pst=null;
         ));
         jScrollPane3.setViewportView(tbl_3);
 
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/employee/payroll/system/Images/erase-128.png"))); // NOI18N
+        jButton1.setIcon(null); // NOI18N
         jButton1.setText("Reset");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

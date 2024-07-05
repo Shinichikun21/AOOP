@@ -24,7 +24,7 @@ PreparedStatement pst=null;
      * Creates new form Users_details
      */
     public users() {
-    	getContentPane().setBackground(new Color(164, 198, 255));
+    	getContentPane().setBackground(new Color(80, 156, 241));
         initComponents();
         conn=db.java_db();
         Toolkit toolkit = getToolkit();
@@ -44,7 +44,7 @@ PreparedStatement pst=null;
     private void initComponents() {
 
         jPanel2 = new javax.swing.JPanel();
-        jPanel2.setBackground(new Color(215, 215, 215));
+        jPanel2.setBackground(new Color(164, 198, 255));
         cmd_add = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();

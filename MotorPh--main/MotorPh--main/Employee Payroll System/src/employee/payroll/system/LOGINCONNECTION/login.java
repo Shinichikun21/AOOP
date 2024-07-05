@@ -87,7 +87,6 @@ PreparedStatement pst=null;
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        txt_username = new javax.swing.JTextField();
         txt_password = new javax.swing.JPasswordField();
         txt_combo = new javax.swing.JComboBox();
         txt_combo.setFont(new Font("Tahoma", Font.BOLD, 11));
@@ -130,31 +129,32 @@ PreparedStatement pst=null;
         		}
         	}
         );
+        txt_username = new javax.swing.JTextField();
+        jPanel2.add(txt_username);
+        txt_username.setBounds(558, 289, 130, 30);
         btnNewButton.setForeground(new Color(0, 0, 0));
-        btnNewButton.setBounds(38, 468, 116, 23);
+        btnNewButton.setBounds(572, 371, 116, 23);
         jPanel2.add(btnNewButton);
         jPanel2.add(cmd_Login);
-        cmd_Login.setBounds(576, 461, 70, 30);
+        cmd_Login.setBounds(594, 446, 70, 30);
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel1.setForeground(new Color(255, 255, 255));
         jLabel1.setText("Username:");
         jPanel2.add(jLabel1);
-        jLabel1.setBounds(450, 350, 70, 16);
+        jLabel1.setBounds(468, 299, 70, 16);
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel2.setForeground(new Color(255, 255, 255));
         jLabel2.setText("Password:");
         jPanel2.add(jLabel2);
-        jLabel2.setBounds(450, 390, 70, 16);
+        jLabel2.setBounds(468, 340, 70, 16);
 
         jLabel6.setFont(new Font("Tahoma", Font.BOLD, 11)); // NOI18N
         jLabel6.setForeground(new Color(255, 255, 255));
         jLabel6.setText("Please enter your username and password");
         jPanel2.add(jLabel6);
-        jLabel6.setBounds(440, 310, 241, 16);
-        jPanel2.add(txt_username);
-        txt_username.setBounds(540, 340, 130, 30);
+        jLabel6.setBounds(458, 246, 241, 16);
 
         txt_password.setDoubleBuffered(true);
         txt_password.addActionListener(new java.awt.event.ActionListener() {
@@ -168,7 +168,7 @@ PreparedStatement pst=null;
             }
         });
         jPanel2.add(txt_password);
-        txt_password.setBounds(540, 380, 130, 30);
+        txt_password.setBounds(558, 330, 130, 30);
 
         txt_combo.setModel(new DefaultComboBoxModel(new String[] {"Employee", "HR", "Payroll Manager", "IT"}));
         txt_combo.addActionListener(new java.awt.event.ActionListener() {
@@ -177,15 +177,15 @@ PreparedStatement pst=null;
             }
         });
         jPanel2.add(txt_combo);
-        txt_combo.setBounds(540, 420, 130, 30);
+        txt_combo.setBounds(558, 405, 130, 30);
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel3.setForeground(new Color(255, 255, 255));
         jLabel3.setText("Designation:");
         jPanel2.add(jLabel3);
-        jLabel3.setBounds(450, 426, 100, 16);
+        jLabel3.setBounds(468, 411, 100, 16);
 
-        jLabel4.setIcon(new ImageIcon(login.class.getResource("/employee/payroll/system/Images/JPEG image.jpg"))); // NOI18N
+        jLabel4.setIcon(new ImageIcon(login.class.getResource("/employee/payroll/system/Images/motoPHLogin.png"))); // NOI18N
         jPanel2.add(jLabel4);
         jLabel4.setBounds(0, -17, 851, 526);
 

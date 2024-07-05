@@ -37,7 +37,7 @@ public class LeaveRequest extends javax.swing.JFrame {
      * Creates new form LeaveRequest
      */
      public LeaveRequest() {
-    	getContentPane().setBackground(new Color(164, 198, 255));
+    	getContentPane().setBackground(new Color(80, 156, 241));
         initComponents();
         conn=db.java_db();
         Toolkit toolkit = getToolkit();
@@ -126,22 +126,22 @@ public class LeaveRequest extends javax.swing.JFrame {
         txt_end = new javax.swing.JTextField();
         txt_end.setBackground(new Color(255, 255, 255));
         lbl_accept = new javax.swing.JButton();
-        lbl_accept.setBackground(new Color(255, 128, 128));
+        lbl_accept.setBackground(new Color(192, 192, 192));
         lbl_decline = new javax.swing.JButton();
-        lbl_decline.setBackground(new Color(119, 191, 142));
+        lbl_decline.setBackground(new Color(192, 192, 192));
         Status = new javax.swing.JLabel();
         txt_status = new javax.swing.JTextField();
         lbl_next = new javax.swing.JButton();
         lbl_next.setFont(new Font("Tahoma", Font.PLAIN, 10));
         lbl_next.setIcon(new ImageIcon(LeaveRequest.class.getResource("/employee/payroll/system/Images/icons8-next-20.png")));
         lbl_prev = new javax.swing.JButton();
-        lbl_prev.setFont(new Font("Tahoma", Font.PLAIN, 10));
+        lbl_prev.setFont(new Font("Tahoma", Font.PLAIN, 9));
         lbl_prev.setIcon(new ImageIcon(LeaveRequest.class.getResource("/employee/payroll/system/Images/icons8-previous-20.png")));
         jLabel8 = new javax.swing.JLabel();
         txt_empid = new javax.swing.JTextField();
         txt_empid.setBackground(new Color(255, 255, 255));
         jButton2 = new javax.swing.JButton();
-        jButton2.setBackground(new Color(255, 128, 128));
+        jButton2.setBackground(new Color(192, 192, 192));
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
